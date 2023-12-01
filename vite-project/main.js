@@ -12,7 +12,7 @@
 //     //putting data into html
 //     console.log(result);
 // });
-const URL=`https://opentdb.com/api.php?amount=10`;
+const URL=`https://api.quotable.io/random`;
 // const URLP=`pokemom/${search}`;
 async function getData(URL){
     try {
@@ -25,8 +25,8 @@ async function getData(URL){
         const data=await response.json();
         document.querySelector("h1").textContent=data.content;
     } catch (error) {
-        // console.log(error,"haha");
-        // document.querySelector("h1").textContent= "no rizz"
+
+
     }
 }
 getData(URL);

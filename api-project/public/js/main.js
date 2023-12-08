@@ -33,7 +33,7 @@
 
 const URL="https://corsproxy.io/?https://opentdb.com/api.php?amount=10";
 
-async function getCatImage(URL) {
+async function question(URL) {
     //const image = await fetch(URL);
     //console.log(image);
     try {
@@ -46,8 +46,9 @@ async function getCatImage(URL) {
                const data=await response.json();
             //    document.getElementById("api-response").textContent=data.content;
                console.log(data)
-               document.querySelector('.apple').innerHTML = `<p>${data.results}</p>`;
+               data.results.forEach(question => console.log(question));
+                document.querySelector('.apple').innerHTML = `<p>${data.results}</p>`;
            } catch (error) {
            }
 }
-getCatImage(URL);
+question(URL);

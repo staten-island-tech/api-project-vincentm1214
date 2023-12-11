@@ -40,7 +40,7 @@ async function question(URL) {
         //         //requesting a response REST API's
         const response=await fetch(URL);
                if(response.status !=200){
-                   throw new Error(response.statusText)
+                   throw new Error("u suck"+response.status)
                }
                 //convert response to JSON
                const data=await response.json();

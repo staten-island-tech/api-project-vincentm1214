@@ -1,5 +1,15 @@
-import '../style/style.css'
+//   import '../style/style.css'
 const URL="https://corsproxy.io/?https://opentdb.com/api.php?amount=10";
+
+// function insertCards(songs){
+//     songs.forEach((x) => {
+//    DOMSelectors.container.insertAdjacentHTML(
+//     "beforeend",
+//     `<div class="card">
+//         <h3 class = "name">${x.name}</h3>
+//         <img src="${x.image}" class="cardimg">
+//         <h4 class = ${x.Artist}>Artist</h4>
+//     </div> `,
 
 async function question(URL) {
     //const image = await fetch(URL);

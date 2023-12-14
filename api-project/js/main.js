@@ -1,8 +1,8 @@
 //   import '../style/style.css'
 const URL="https://corsproxy.io/?https://opentdb.com/api.php?amount=10";
 
-// function insertCards(songs){
-//     songs.forEach((x) => {
+// function insertCards(quiz){
+//     quiz.forEach((x) => {
 //    DOMSelectors.container.insertAdjacentHTML(
 //     "beforeend",
 //     `<div class="card">

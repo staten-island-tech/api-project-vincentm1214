@@ -9,8 +9,7 @@ const URL="https://corsproxy.io/?https://opentdb.com/api.php?amount=10";
 //          <h3 class = "name">${x.name}</h3>
 //          <img src="${x.image}" class="cardimg">
 //          <h4 class = ${x.answer}></h4>
-//      </div> `)}
-//     }
+//      </div> `)}}
 
 async function question(URL) {
     //const image = await fetch(URL);

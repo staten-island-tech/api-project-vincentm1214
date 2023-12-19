@@ -42,8 +42,7 @@
      flex-wrap: wrap;
      justify-content: space-around
   }
-  
-  
+
   .card {
      font-size: 3rem;
      background-color: var(--secondary);
@@ -90,7 +89,8 @@
      font-size: 3rem;
   } */
   
-  h2{
+  h1{
    font-size: 3rem;
    text-align: center;
+   color: var(--mid);
   }

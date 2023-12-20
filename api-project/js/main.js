@@ -11,6 +11,16 @@ const URL="https://corsproxy.io/?https://opentdb.com/api.php?amount=10";
 //          <h4 class = ${x.answer}></h4>
 //      </div> `)}}
 
+function makecard(){
+    let org= DOMSelectors.question
+    let ger=DOMSelectors.answer
+    let lop=DOMSelectors.wrong
+    let cof=DOMSelectors.hardness
+    let abf=DOMSelectors.choice
+    
+}
+
+
 async function question(URL) {
     //const image = await fetch(URL);
     //console.log(image);
@@ -31,3 +41,5 @@ async function question(URL) {
 }
 
 question(URL);
+
+

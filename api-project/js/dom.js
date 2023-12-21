@@ -1,11 +1,11 @@
-const DOMSelectors=[
-    body=document.querySelector("body"),
-    card=document.getElementById('app'),
-    app=document.getElementById('container'),
-    org=document.getElementById('question'),
-    ger=document.getElementById('answer'),
-    lop=document.getElementById('wrong'),
-    cof=document.getElementByID('difficulty'),
-    abf=document.getElementById('category'),
-]
-export{DOMSelectors}
+const DOMSelectors={
+    body:document.querySelector(".body"),
+    card:document.querySelector('#card'),
+    app:document.querySelector('#container'),
+    org:document.querySelector('#question'),
+    ger:document.querySelector('#answer'),
+    lop:document.querySelector('#wrong'),
+    cof:document.querySelector('#difficulty'),
+    abf:document.querySelector('#category'),
+}
+export{DOMSelectors};

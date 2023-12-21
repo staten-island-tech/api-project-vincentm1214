@@ -1,3 +1,5 @@
+import { DOMSelectors } from "./dom";
+
 //   import '../style/style.css'
 const URL="https://corsproxy.io/?https://opentdb.com/api.php?amount=10";
 
@@ -12,12 +14,19 @@ const URL="https://corsproxy.io/?https://opentdb.com/api.php?amount=10";
 //      </div> `)}}
 
 function makecard(){
-    let org= DOMSelectors.question
-    let ger=DOMSelectors.answer
-    let lop=DOMSelectors.wrong
-    let cof=DOMSelectors.hardness
-    let abf=DOMSelectors.choice
-    
+    let org= DOMSelectors.question.value;
+    let ger=DOMSelectors.answer.value;
+    let lop=DOMSelectors.wrong.value;
+    let cof=DOMSelectors.hardness.value;
+    let abf=DOMSelectors.choice.value;
+    DOMSelectors.makecard.insertAdjacentHTML("beforeend",
+`<div class="food">
+<h3> question: ${org}</h3>
+<h3> answer: ${ger}</h3>
+<h3> choices: ${abf}</h3>
+<h3> wrong: ${lop}</h3>
+<h3> hardness: ${cof}</h3>
+</div>`);
 }
 
 

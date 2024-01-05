@@ -1,20 +1,13 @@
-const DOMSelectors={
-  body:document.querySelector(".body"),
-  card:document.querySelector('#card'),
-  app:document.querySelector('#container'),
-  org:document.querySelector('#question'),
-  ger:document.querySelector('#answer'),
-}
-// import { DOMSelectors } from './dom';
+import { DOMSelectors } from "./dommy";
+   import '../style/style.css'
 
 
-//   import '../style/style.css'
-let url = new URL('https://corsproxy.io/?https://opentdb.com/api.php?amount=10');
-// const link="https://corsproxy.io/?https://opentdb.com/api.php?amount=10";
-async function question(url) {
+// let url = new URL('https://corsproxy.io/?https://opentdb.com/api.php?amount=10');
+ const link="https://corsproxy.io/?https://opentdb.com/api.php?amount=10";
+async function question(link) {
   try {
       //         //requesting a response REST API's
-      const response=await fetch(url);
+      const response=await fetch(link);
              if(response.status !=200){
                  throw new Error("u suck"+response.status)
              }
@@ -24,8 +17,8 @@ async function question(url) {
               DOMSelectors.app.insertAdjacentHTML(
                   ("beforeend",
                   `<div class="laquestion">
-                  <h3> question: ${org}</h3>
-                  <h3> answer: ${ger}</h3>
+                  <h2> question: ${obj.org}</h2>
+                  <h3> answer: ${obj.ger}</h3>
                   </div>`))
              })
           //    document.getElementById("api-response").textContent=data.content;
@@ -33,7 +26,8 @@ async function question(url) {
              data.results.forEach(question => console.log(question));
               document.querySelector('.apple').innerHTML = `<p>${data.results}</p>`;
          } catch (error) {
+
          }
 }
 
-question(url);
+question(link);

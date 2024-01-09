@@ -4,8 +4,8 @@ const DOMSelectors={
   app:document.querySelector('#container'),
   org:document.querySelector('#question'),
   ger:document.querySelector('#answer'),
-  h2:document.querySelectorAll('.h2')
- 
+  h2:document.querySelectorAll('.h2'),
+  Buttons:document.querySelectorAll('.')
  };
  
 import '../style/style.css'

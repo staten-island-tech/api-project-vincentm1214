@@ -6,7 +6,7 @@ const DOMSelectors={
   ger:document.querySelector('#answer'),
   button:document.querySelectorAll('.button')
  }
- //   import '../style/style.css'
+    import '../style/style.css'
  const URL="https://corsproxy.io/?https://opentdb.com/api.php?amount=10";
  async function getData(URL) {
   try {
@@ -20,13 +20,7 @@ const DOMSelectors={
           //    document.getElementById("api-response").textContent=data.content;
              console.log(data);
              makecard(data.results);
- //             data.results.forEach(question =>[
-             }
-            } catch (error) {
-              console.log(error,"invalid")
-              document.querySelector("h2").textContent="nothing man"
-            }
-            function filt() {
+             function filt() {
               let boutons = document.querySelectorAll(".bouton")
               boutons.forEach((bouton) => bouton.addEventListener("click", function () {
                 if(bouton.textContent.toLowerCase()==="show all"){document.querySelector(".card").innerHTML=''
@@ -40,6 +34,13 @@ const DOMSelectors={
             }
            
             filt();
+ //             data.results.forEach(question =>[
+             }
+            } catch (error) {
+              console.log(error,"invalid")
+              document.querySelector("h2").textContent="nothing man"
+            }
+            
  //              document.querySelector('.apple').innerHTML = `<p>${data.results}</p>`;
        
  }

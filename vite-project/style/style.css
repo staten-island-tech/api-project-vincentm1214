@@ -21,57 +21,40 @@
         margin: 0;
         box-sizing: border-box;
      }
-    
-    
-      .card {
+   
+   
+     .card {
         display: flex;
         align-items: center;
         text-align: center;
         flex-wrap: wrap;
         justify-content: space-around;
-     } 
-    
-     /* .header {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        flex-wrap: wrap;
-        justify-content: space-around
-     } */
+     }
+   
       .laquestion {
-         display:flex;
-         align-items: center;
-         text-align: center;
-         flex-wrap: wrap;
-         justify-content: space-around;
-        font-size: 2rem;
+        font-size: 1rem;
         background-color: var(--moyai);
         padding: 2%;
         margin: 2rem 2rem;
         width: 450px;
         height: 40vh;
-
      }
   
      h3{
+      border-radius: 5px;
       margin-top: 2rem;
      }
-    
-    
-     h2{
+   
+   
+     h4{
+      border-radius: 5px;
       margin-top: 0rem;
-      font-size: 2rem;
      }
-     /* .group1, .group2, .group3, .group4, .group5, .group6{
-      background-color: white;
-        border-radius: 10px;
-        border-color: black;
-        font-size: 3rem;
-     } */
-    
+   
      h1{
       font-size: 3rem;
       text-align: center;
-      color: var(--mid);
+      color: var(--moyai);
      }
   
+ 

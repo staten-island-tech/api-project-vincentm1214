@@ -4,11 +4,9 @@ const DOMSelectors={
   app:document.querySelector('#container'),
   org:document.querySelector('#question'),
   ger:document.querySelector('#answer'),
-  h2:document.querySelectorAll('.h2'),
-  Buttons:document.querySelectorAll('.')
- };
- 
-import '../style/style.css'
+  button:document.querySelectorAll('.button')
+ }
+ //   import '../style/style.css'
  const URL="https://corsproxy.io/?https://opentdb.com/api.php?amount=10";
  async function getData(URL) {
   try {
@@ -26,16 +24,26 @@ import '../style/style.css'
              }
             } catch (error) {
               console.log(error,"invalid")
-              document.querySelector("h2").innerHTML="nothing man"
+              document.querySelector("h2").textContent="nothing man"
             }
+            function filt() {
+              let boutons = document.querySelectorAll(".bouton")
+              boutons.forEach((bouton) => bouton.addEventListener("click", function () {
+                if(bouton.textContent.toLowerCase()==="show all"){document.querySelector(".card").innerHTML=''
+              makecard(data.results);
+            }else{
+                  let difficult = bouton.textContent.toLowerCase()
+                  let newArr = data.results.filter((quest) => quest.difficulty.includes(difficult))
+                  document.querySelector(".card").innerHTML = ""
+                  makecard(newArr)
+            }}))
+            }
+           
+            filt();
  //              document.querySelector('.apple').innerHTML = `<p>${data.results}</p>`;
-        
+       
  }
- 
- 
  getData(URL);
- 
- 
  function makecard(questions) {
  questions.forEach((question)=> DOMSelectors.card.insertAdjacentHTML(
     "beforeend",
